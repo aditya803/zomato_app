@@ -8,35 +8,35 @@ class ItemView extends StatefulWidget {
 class _ItemViewState extends State<ItemView> {
   var itemList= [
     {
-      "name": "A",
+      "name": "Dish A",
       "image":"assets/1.jpg" ,
     },
     {
-      "name": "A",
+      "name": "Dish A",
       "image":"assets/1.jpg" ,
     },
     {
-      "name": "A",
+      "name": "Dish A",
       "image":"assets/1.jpg" ,
     },
     {
-      "name": "A",
+      "name": "Dish A",
       "image":"assets/1.jpg" ,
     },
     {
-      "name": "A",
+      "name": "Dish A",
       "image":"assets/1.jpg" ,
     },
     {
-      "name": "A",
+      "name": "Dish A",
       "image":"assets/1.jpg" ,
     },
     {
-      "name": "A",
+      "name": "Dish A",
       "image":"assets/1.jpg" ,
     },
     {
-      "name": "A",
+      "name": "Dish A",
       "image":"assets/1.jpg" ,
     },
   ];
@@ -68,12 +68,16 @@ class SingleProd extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Expanded(child: Image.asset(prod_image,fit: BoxFit.cover)),
-        SizedBox(height: 10),
-        Text(prod_name),
-      ],
+    return Container(
+      height: 200,
+      width: 100,
+      child: Column(
+        children: <Widget>[
+          Expanded(child: Image.asset(prod_image,fit: BoxFit.cover)),
+          SizedBox(height: 10),
+          Text(prod_name,style: TextStyle(color: Colors.grey,fontSize: 15)),
+        ],
+      ),
     );
   }
 }

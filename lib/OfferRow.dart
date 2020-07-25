@@ -5,28 +5,30 @@ class OfferRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         offerTile(Colors.redAccent, 'ALL OFFERS'),
-        offerTile(Colors.redAccent, 'ALL OFFERS'),
-        offerTile(Colors.redAccent, 'ALL OFFERS'),
+        offerTile(Colors.greenAccent, '40% off'),
+        offerTile(Colors.blueAccent, '30% off'),
       ],
     );
   }
 }
 
 Widget offerTile(Color color, String heading){
-  return Padding(
-      padding: EdgeInsets.all(5),
-      child: Container(
+  return Container(
         height: 100,
         width: 100,
-        color: color,
+        padding: EdgeInsets.all(5),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+          color: color,
+        ),
         child: InkWell(
           onTap: (){},
            child: Center(
                child: Text(heading),
            ),
         ),
-      )
-    );
+      );
 }

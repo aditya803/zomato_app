@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         backgroundColor: Colors.white,
         title: Text('Home',
           style: TextStyle(
-            color: Colors.black
+              color: Colors.black
           ),
         ),
         leading: Icon(
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         ),
         actions: <Widget>[
           Icon(
-              Icons.scanner,
+            Icons.scanner,
             color: Colors.black,
           ),
           SizedBox(width: 10),
@@ -62,8 +62,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             controller: controller,
             tabs: <Widget>[
               Tab(text: 'Food'),
-              Tab(text: 'Food'),
-              Tab(text: 'Food'),
+              Tab(text: 'market'),
+              Tab(text: 'food@work'),
             ]),
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -119,3 +119,25 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   }
 }
 
+/*
+Text('Home',
+          style: TextStyle(
+            color: Colors.black
+          ),
+        ),
+        leading: Icon(
+          Icons.home,
+          color: Colors.black,
+        ),
+        actions: <Widget>[
+          Icon(
+              Icons.scanner,
+            color: Colors.black,
+          ),
+          SizedBox(width: 10),
+          Icon(
+            Icons.credit_card,
+            color: Colors.black,
+          ),
+        ],
+ */
