@@ -28,9 +28,13 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     controller = TabController(length: 3, vsync: this);
   }
   @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text('Home',
@@ -53,14 +57,15 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             color: Colors.black,
           ),
         ],
+        bottom: TabBar(
+            labelColor: Colors.black,
+            controller: controller,
+            tabs: <Widget>[
+              Tab(text: 'Food'),
+              Tab(text: 'Food'),
+              Tab(text: 'Food'),
+            ]),
       ),
-      drawer: TabBar(
-          controller: controller,
-          tabs: <Widget>[
-            Tab(text: 'Food'),
-            Tab(text: 'Food'),
-            Tab(text: 'Food'),
-          ]),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 5.0,
         showUnselectedLabels: true,
